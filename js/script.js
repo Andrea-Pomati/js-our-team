@@ -72,11 +72,46 @@ const members = [
 
 ];
 
+console.log(members)
+
 //MILESTONE 1:
 //Stampare su console, per ogni membro del team, 
 //le informazioni di nome, ruolo e la stringa della foto
 
-console.log(members)
+for ( let i=0; i < members.length; i++) {
+    let currentElement = members[i];
+    console.log(currentElement)
+    }
+
 
 //MILESTONE 2:
 //Stampare le stesse informazioni su DOM sottoforma di stringhe
+
+
+//collego la variabile al documento html in particolare al div con classe row
+let container = document.querySelector(".row");
+
+//ciclo for con all'interno for..in
+for (let i = 0; i < members.length; i++){
+
+    let onemember = members[i];
+
+    let newEl = createElement();
+    
+    for(let key in onemember){
+        console.log(`${key} ${onemember[key]}`);
+
+        newEl.append(` ${onemember[key]}`);
+        container.append(newEl);
+    }
+
+}
+
+
+//funzione che crea degli elementi div
+
+function createElement(){
+    let element = document.createElement("div");
+
+    return element;
+}
