@@ -77,3 +77,6 @@ const members = [
 //le informazioni di nome, ruolo e la stringa della foto
 
 console.log(members)
+
+//MILESTONE 2:
+//Stampare le stesse informazioni su DOM sottoforma di stringhe
